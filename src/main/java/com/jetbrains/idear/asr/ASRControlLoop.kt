@@ -56,9 +56,9 @@ class ASRControlLoop(private val recognizer: CustomLiveSpeechRecognizer) : Runna
             println("\tTop H:       " + result.result + " / " + result.result.bestToken + " / " + result.result.bestPronunciationResult)
             println("\tTop 3H:      " + result.getNbest(3))
 
-            logger.info("Recognized:    ")
-            logger.info("\tTop H:       " + result.result + " / " + result.result.bestToken + " / " + result.result.bestPronunciationResult)
-            logger.info("\tTop 3H:      " + result.getNbest(3))
+//            logger.info("Recognized:    ")
+//            logger.info("\tTop H:       " + result.result + " / " + result.result.bestToken + " / " + result.result.bestPronunciationResult)
+//            logger.info("\tTop 3H:      " + result.getNbest(3))
 
             return result.hypothesis
         }
