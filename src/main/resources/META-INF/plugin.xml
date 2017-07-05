@@ -34,17 +34,12 @@
     </extensionPoints>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationConfigurable groupId="tools"
-                                 displayName="Recognition"
-                                 id="preferences.IdearConfigurable"
-                                 instance="com.jetbrains.idear.settings.IdearConfigurable"/>
         <fileTypeFactory implementation="com.jetbrains.idear.jsgf.JSpeechFileTypeFactory"/>
         <lang.syntaxHighlighterFactory language="JSpeech" implementationClass="com.jetbrains.idear.jsgf.JSpeechSyntaxHighlighterFactory"/>
         <lang.parserDefinition language="JSpeech" implementationClass="com.jetbrains.idear.jsgf.JSpeechParserDefinition"/>
         <colorSettingsPage implementation="com.jetbrains.idear.jsgf.JSpeechColorSettingsPage"/>
         <annotator language="JSpeech" implementationClass="com.jetbrains.idear.jsgf.JSpeechAnnotator"/>
         <gotoSymbolContributor implementation="com.jetbrains.idear.jsgf.JSpeechChooseByNameContributor"/>
-
 
         <psi.referenceContributor implementation="com.jetbrains.idear.jsgf.JSpeechReferenceContributor"/>
 
@@ -62,6 +57,12 @@
 
         <applicationService serviceInterface="com.jetbrains.idear.ide.IDEService" serviceImplementation="com.jetbrains.idear.ide.IDEService">
         </applicationService>
+
+        <applicationService serviceInterface="com.jetbrains.idear.settings.IdearSettingsProvider" serviceImplementation="com.jetbrains.idear.settings.IdearSettingsProvider"/>
+        <applicationConfigurable groupId="tools"
+                                 displayName="Recognition"
+                                 id="preferences.IdearConfigurable"
+                                 instance="com.jetbrains.idear.settings.IdearConfigurable"/>
     </extensions>
 
     <extensions defaultExtensionNs="com.jetbrains.idear">
